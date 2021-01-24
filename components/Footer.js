@@ -6,7 +6,7 @@ const AppFooter = (props) => {
     <Footer>
       <FooterTab>
         <Button full>
-          <Text>Footer</Text>
+          <Text>Home</Text>
         </Button>
       </FooterTab>
     </Footer>

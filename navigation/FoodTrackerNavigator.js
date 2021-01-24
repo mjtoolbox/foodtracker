@@ -10,6 +10,10 @@ import DayEntryListScreen from '../screens/DayEntryListScreen';
 const FoodTrackerNavigator = createStackNavigator({
   Main: {
     screen: MainScreen,
+    navigationOptions: {
+      headerMode: 'none',
+      headerShown: false,
+    },
   },
   DayEntryList: {
     screen: DayEntryListScreen,

@@ -24,8 +24,17 @@ import AppFooter from '../components/Footer';
 const MainScreen = (props) => {
   return (
     <Container>
-      <AppHeader />
-      <Content><Text>Welcome to Food tracker</Text></Content>
+      <AppHeader go={() => props.navigation.navigate('FoodList')} />
+      <Content>
+        <Text>Welcome to Food tracker</Text>
+        <Button
+          bordered
+          small
+          onPress={() => props.navigation.navigate('DayEntryList')}
+        >
+          <Text>View Daily Entry List</Text>
+        </Button>
+      </Content>
       <AppFooter />
     </Container>
   );

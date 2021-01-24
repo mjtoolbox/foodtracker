@@ -3,10 +3,15 @@ import { StyleSheet, View } from 'react-native';
 import { Icon } from 'native-base';
 
 const AddMeal = (props) => {
+  const enterMealHandler = () => {
+    props.go('FoodList');
+    // props.navigation.navigate('FoodList');
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.iconContainer}>
-        <Icon name='add' type='MaterialIcons' />
+        <Icon name='add' type='MaterialIcons' onPress={enterMealHandler} />
       </View>
     </View>
   );
