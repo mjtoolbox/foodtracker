@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Container } from 'native-base';
+import { Container, Button } from 'native-base';
 
-const LogMealScreen = (props) => {
+const EnterMealScreen = (props) => {
+  const logAndMoreHandler = () => {
+    console.log('save and refresh');
+  };
+
+  const logSaveHandler = () => {
+    props.navigation.navigate('DayEntryDetail');
+  };
+
   return (
     <View style={styles.container}>
       <Text>
@@ -15,10 +23,10 @@ const LogMealScreen = (props) => {
         meal time (breakfas, lunch, dinner, am snack, pm snack, night
         snack,anytime)
       </Text>
-      <Button primary>
+      <Button primary onPress={logAndMoreHandler}>
         <Text>LOG & ADD MORE</Text>
       </Button>
-      <Button primary>
+      <Button primary onPress={logSaveHandler}>
         <Text>LOG THIS</Text>
       </Button>
     </View>
@@ -32,4 +40,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-export default LogMealScreen;
+export default EnterMealScreen;

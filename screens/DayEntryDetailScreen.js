@@ -3,18 +3,22 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 import { Container } from 'native-base';
 
 const DayEntryDetailScreen = (props) => {
+  const mealEntryHandle = () => {
+    props.navigation.navigate('FoodList');
+  };
+
   return (
     <View style={styles.container}>
       <Text>Daily entry detail - add + navigate to FoodListScreen </Text>
       <Text>Breakfast</Text>
       <Text>milk</Text>
-      <Text>+</Text>
+      <Text onPress={mealEntryHandle}>+</Text>
       <Text>Lunch</Text>
       <Text>pasta</Text>
-      <Text>+</Text>
+      <Text onPress={mealEntryHandle}>+</Text>
       <Text>Dinner</Text>
       <Text>steak</Text>
-      <Text>+</Text>
+      <Text onPress={mealEntryHandle}>+</Text>
     </View>
   );
 };
