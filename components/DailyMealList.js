@@ -50,11 +50,13 @@ const formattedDate = (idate) => {
 
 const renderMealList = (itemData) => {
   return (
-    <TouchableNativeFeedback>
-      <ListItem>
+    // <TouchableNativeFeedback>
+    <ListItem style={{ marginLeft: 0 }}>
+      <Body>
         <Text>{formattedDate(itemData.item.date)}</Text>
-      </ListItem>
-    </TouchableNativeFeedback>
+      </Body>
+    </ListItem>
+    // </TouchableNativeFeedback>
   );
 };
 

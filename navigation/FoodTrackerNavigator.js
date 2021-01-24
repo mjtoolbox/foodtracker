@@ -5,9 +5,19 @@ import DayEntryDetailScreen from '../screens/DayEntryDetailScreen';
 import FoodListScreen from '../screens/FoodListScreen';
 import CreateFoodScreen from '../screens/CreateFoodScreen';
 import EnterMealScreen from '../screens/EnterMealScreen';
+import DayEntryListScreen from '../screens/DayEntryListScreen';
 
 const FoodTrackerNavigator = createStackNavigator({
-  Main: MainScreen,
+  Main: {
+    screen: MainScreen,
+  },
+  DayEntryList: {
+    screen: DayEntryListScreen,
+    navigationOptions: {
+      headerTitleAlign: { alignSelf: 'center' },
+      title: 'Log Entry List',
+    },
+  },
   DayEntryDetail: DayEntryDetailScreen,
   FoodList: FoodListScreen,
   CreateFood: CreateFoodScreen,

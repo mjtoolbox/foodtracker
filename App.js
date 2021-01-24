@@ -1,21 +1,6 @@
 import React, { Component } from 'react';
 import { useFonts } from 'expo-font';
-import {
-  Container,
-  Header,
-  Title,
-  Content,
-  Footer,
-  FooterTab,
-  Button,
-  Left,
-  Right,
-  Body,
-  Icon,
-  Text,
-  List,
-  ListItem,
-} from 'native-base';
+
 import DailyMealList from './components/DailyMealList';
 import AppHeader from './components/Header';
 import AppFooter from './components/Footer';
